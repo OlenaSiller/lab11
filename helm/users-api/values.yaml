@@ -1,0 +1,21 @@
+image:
+  repository: arnoldsiller/users-api
+  tag: latest
+  pullPolicy: IfNotPresent
+
+serviceAccount:
+  create: true
+
+service:
+  type: ClusterIP
+  name: users-api
+  port: 8000
+
+ingress:
+  enabled: false
+
+autoscaling:
+  enabled: true  
+  minReplicas: 1
+  maxReplicas: 3
+  targetCPUUtilizationPercentage: 80
