@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: argocd-rbac-cm
+  namespace: argocd
+data:
+  policy.default: role:readonly
+  policy.csv: |
+    # Volle Rechte für den Benutzer 'admin'
+    p, admin, applications, get, *, allow
+    p, admin, applications, list, *, allow
+    p, admin, applications, create, *, allow
+    p, admin, applications, update, *, allow
+    p, admin, applications, delete, *, allow
+    p, admin, applications, sync, *, allow
+    p, admin, applications, override, *, allow
+    p, admin, applications, action, *, allow
+    p, admin, applications, rollback, *, allow
+    p, admin, repositories, get, *, allow
+    p, admin, repositories, create, *, allow
+    p, admin, repositories, update, *, allow
+    p, admin, repositories, delete, *, allow
+    p, admin, clusters, get, *, allow
+    p, admin, clusters, create, *, allow
+    p, admin, clusters, update, *, allow
+    p, admin, clusters, delete, *, allow
+    p, admin, projects, *, *, allow
+    p, admin, accounts, get, *, allow
+    p, admin, certificates, *, *, allow
+    p, admin, gpgkeys, *, *, allow
