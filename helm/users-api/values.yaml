@@ -1,6 +1,6 @@
 image:
   repository: OlenaSiller/users-api
-  tag: latest
+  tag: 1.2.3
   pullPolicy: IfNotPresent
 
 serviceAccount:
