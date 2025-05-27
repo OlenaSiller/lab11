@@ -1,5 +1,5 @@
 image:
-  repository: arnoldsiller/users-api
+  repository: OlenaSiller/users-api
   tag: latest
   pullPolicy: IfNotPresent
 

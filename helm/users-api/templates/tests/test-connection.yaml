@@ -13,5 +13,5 @@ spec:
       image: busybox
       command: ['wget']
       args:
-        - "users-api:{{ .Values.service.port | default 8000 }}"  # Hier sicherstellen, dass der Port korrekt gesetzt ist
+        - "users-api:{{ .Values.service.port | default 8000 }}"  
   restartPolicy: Never
